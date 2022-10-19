@@ -19,7 +19,7 @@ const NewEvent=()=>{
 
     const finishHandler=(values)=>{
         
-        if( !values.Name || !values.Email )
+        if( values?.Name?.trim()==='' || values?.Email?.trim()===''  )
         message.error('Please fill the Mandetory Fields');
         
         else 
